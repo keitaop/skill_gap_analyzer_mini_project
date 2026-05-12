@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Skill Gap Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <h2>SkillAI</h2>
+    <div>
+        <a href="#">Home</a>
+        <a href="#analyzer">Analyzer</a>
+    </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>Discover Your Skill Gaps</h1>
+    <p>AI-powered career insights and personalized learning path</p>
+    <button onclick="scrollToAnalyzer()">Start Analysis</button>
+</div>
+
+<!-- ANALYZER -->
+<div class="container" id="analyzer">
+    <h2>Skill Gap Analyzer</h2>
+
+    <select id="role">
+        <option value="data">Data Analyst</option>
+        <option value="ai">AI Engineer</option>
+        <option value="web">Web Developer</option>
+        <option value="dev">Software Developer</option>
+        <option value="cyber">Cyber Security</option>
+        <option value="cloud">Cloud Engineer</option>
+        <option value="ml">ML Engineer</option>
+        <option value="ui">UI/UX Designer</option>
+        <option value="mobile">Mobile Developer</option>
+        <option value="game">Game Developer</option>
+    </select>
+
+    <input type="text" id="skills" placeholder="Enter skills (comma separated)">
+
+    <button onclick="analyzeSkills()">Analyze</button>
+
+    <div id="loader" class="hidden">Analyzing with AI...</div>
+    <div id="result"></div>
+
+<canvas id="skillChart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
